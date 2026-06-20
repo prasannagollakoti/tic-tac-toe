@@ -6,7 +6,7 @@
 
 body{
   background:#050505;
-  color:#00ff88;
+  color:#00bfff;
   font-family:Consolas, monospace;
   overflow-y:auto;
 }
@@ -22,11 +22,11 @@ body{
 h1{
   font-size:3rem;
   margin-bottom:30px;
-  color:#00ff88;
+  color:#00bfff;
   text-shadow:
-  0 0 10px #00ff88,
-  0 0 20px #00ff88,
-  0 0 40px #00ff88;
+  0 0 10px #00bfff,
+  0 0 20px #00bfff,
+  0 0 40px #00bfff;
 }
 
 /* Controls */
@@ -46,13 +46,13 @@ h1{
   outline:none;
   border-radius:15px;
   background:#111;
-  color:#00ff88;
-  border:2px solid #00ff88;
+  color:#00bfff;
+  border:2px solid #00bfff;
   font-size:16px;
 }
 
 .controls input::placeholder{
-  color:#00cc66;
+  color:#66ccff;
 }
 
 button{
@@ -60,7 +60,7 @@ button{
   border:none;
   border-radius:15px;
   cursor:pointer;
-  background:#00ff88;
+  background:#00bfff;
   color:black;
   font-size:16px;
   font-weight:bold;
@@ -70,8 +70,8 @@ button{
 button:hover{
   transform:translateY(-5px);
   box-shadow:
-  0 0 10px #00ff88,
-  0 0 30px #00ff88;
+  0 0 10px #00bfff,
+  0 0 30px #00bfff;
 }
 
 /* Players */
@@ -88,13 +88,13 @@ button:hover{
 .turn-card,
 .stats-card{
   background:#111;
-  border:2px solid #00ff88;
+  border:2px solid #00bfff;
   border-radius:25px;
   padding:25px;
   min-width:250px;
 
   box-shadow:
-  0 0 15px rgba(0,255,136,.5);
+  0 0 15px rgba(0,191,255,.5);
 }
 
 .player-card h2,
@@ -119,10 +119,10 @@ button:hover{
   border:none;
   border-radius:20px;
   background:#111;
-  color:#00ff88;
+  color:#00bfff;
   font-size:60px;
   font-weight:bold;
-  border:2px solid #00ff88;
+  border:2px solid #00bfff;
 
   transition:.3s;
 }
@@ -131,8 +131,8 @@ button:hover{
   transform:scale(1.05);
 
   box-shadow:
-  0 0 15px #00ff88,
-  0 0 30px #00ff88;
+  0 0 15px #00bfff,
+  0 0 30px #00bfff;
 }
 
 /* Winner */
@@ -158,14 +158,14 @@ button:hover{
 }
 
 .connected{
-  color:#00ff88;
+  color:#00bfff;
 }
 
 /* Restart */
 
 .restart-btn{
   margin-top:30px;
-  background:#00ff88;
+  background:#00bfff;
   width:250px;
   font-size:20px;
 }
@@ -201,6 +201,7 @@ width:90%;
 }
 
 }
+
 @media (max-width: 768px){
 
   h1{
