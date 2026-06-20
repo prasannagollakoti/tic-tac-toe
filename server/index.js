@@ -10,9 +10,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
-  },
+    origin: [
+      "http://localhost:5173",
+      "https://tic-tac-cj74p09my-prasanna-projects.vercel.app"
+    ]
+  }
 });
 
 // Store room information
