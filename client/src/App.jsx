@@ -212,13 +212,11 @@ return (
   <div className="App">
 
     {winner && (
-      <Confetti
-        width={width}
-        height={height}
-        recycle={false}
-        numberOfPieces={400}
-      />
-    )}
+  <Confetti
+    recycle={false}
+    numberOfPieces={250}
+  />
+)}
 
     {/* Title */}
     <h1>🟢 Tic Tac Toe Multiplayer</h1>
