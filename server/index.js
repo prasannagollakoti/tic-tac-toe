@@ -90,12 +90,6 @@ io.on("connection", (socket) => {
     }
   }
 });
-
-      if (rooms[room].players.length === 0) {
-        delete rooms[room];
-      }
-    }
-  });
 });
 
 const PORT = process.env.PORT || 5000;
