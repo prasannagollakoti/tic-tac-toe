@@ -1,0 +1,203 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#00ff88;
+  font-family:Consolas, monospace;
+  overflow-y:auto;
+}
+
+.App{
+  text-align:center;
+  min-height:100vh;
+  padding:20px;
+}
+
+/* Title */
+
+h1{
+  font-size:3rem;
+  margin-bottom:30px;
+  color:#00ff88;
+  text-shadow:
+  0 0 10px #00ff88,
+  0 0 20px #00ff88,
+  0 0 40px #00ff88;
+}
+
+/* Controls */
+
+.controls{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:40px;
+}
+
+.controls input{
+  width:220px;
+  padding:15px;
+  border:none;
+  outline:none;
+  border-radius:15px;
+  background:#111;
+  color:#00ff88;
+  border:2px solid #00ff88;
+  font-size:16px;
+}
+
+.controls input::placeholder{
+  color:#00cc66;
+}
+
+button{
+  padding:15px 20px;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+  background:#00ff88;
+  color:black;
+  font-size:16px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+button:hover{
+  transform:translateY(-5px);
+  box-shadow:
+  0 0 10px #00ff88,
+  0 0 30px #00ff88;
+}
+
+/* Players */
+
+.players{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.player-card,
+.turn-card,
+.stats-card{
+  background:#111;
+  border:2px solid #00ff88;
+  border-radius:25px;
+  padding:25px;
+  min-width:250px;
+
+  box-shadow:
+  0 0 15px rgba(0,255,136,.5);
+}
+
+.player-card h2,
+.turn-card h2,
+.stats-card h2{
+  margin-bottom:15px;
+}
+
+/* Board */
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(3,130px);
+  gap:15px;
+  justify-content:center;
+  margin:40px 0;
+}
+
+.cell{
+  width:130px;
+  height:130px;
+  border:none;
+  border-radius:20px;
+  background:#111;
+  color:#00ff88;
+  font-size:60px;
+  font-weight:bold;
+  border:2px solid #00ff88;
+
+  transition:.3s;
+}
+
+.cell:hover{
+  transform:scale(1.05);
+
+  box-shadow:
+  0 0 15px #00ff88,
+  0 0 30px #00ff88;
+}
+
+/* Winner */
+
+.winner{
+  color:gold;
+  font-size:35px;
+
+  text-shadow:
+  0 0 10px gold,
+  0 0 20px gold;
+}
+
+.draw{
+  color:orange;
+  font-size:30px;
+}
+
+/* Status */
+
+.waiting{
+  color:orange;
+}
+
+.connected{
+  color:#00ff88;
+}
+
+/* Restart */
+
+.restart-btn{
+  margin-top:30px;
+  background:#00ff88;
+  width:250px;
+  font-size:20px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.board{
+grid-template-columns:repeat(3,100px);
+}
+
+.cell{
+width:100px;
+height:100px;
+font-size:45px;
+}
+
+.controls{
+flex-direction:column;
+align-items:center;
+}
+
+.players{
+flex-direction:column;
+align-items:center;
+}
+
+.player-card,
+.turn-card,
+.stats-card{
+width:90%;
+}
+
+}
