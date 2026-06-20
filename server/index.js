@@ -67,22 +67,29 @@ io.on("connection", (socket) => {
     io.to(room).emit("restart_board");
   });
 
-  socket.on("disconnect", () => {
-    console.log("User disconnected:", socket.id);
+ socket.on("disconnect", () => {
+  console.log("User disconnected:", socket.id);
 
-    for (const room in rooms) {
-      rooms[room].players = rooms[room].players.filter(
-        (p) => p.id !== socket.id
-      );
+  for (const room in rooms) {
+    rooms[room].players = rooms[room].players.filter(
+      (p) => p.id !== socket.id
+    );
 
-      io.to(room).emit("players_count", rooms[room].players.length);
+    io.to(room).emit("players_count", rooms[room].players.length);
 
-      io.to(room).emit("players_info", {
-        xName:
-          rooms[room].players.find((p) => p.symbol === "X")?.name || "",
-        oName:
-          rooms[room].players.find((p) => p.symbol === "O")?.name || "",
-      });
+    io.to(room).emit("players_info", {
+      xName:
+        rooms[room].players.find((p) => p.symbol === "X")?.name || "",
+      oName:
+        rooms[room].players.find((p) => p.symbol === "O")?.name || "",
+    });
+
+    // Delete room if empty
+    if (rooms[room].players.length === 0) {
+      delete rooms[room];
+    }
+  }
+});
 
       if (rooms[room].players.length === 0) {
         delete rooms[room];

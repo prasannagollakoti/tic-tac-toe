@@ -201,3 +201,41 @@ width:90%;
 }
 
 }
+@media (max-width: 768px){
+
+  h1{
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .controls{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input{
+    width: 90%;
+  }
+
+  .controls button{
+    width: 90%;
+  }
+
+  .board{
+    grid-template-columns: repeat(3,90px);
+    gap: 10px;
+  }
+
+  .cell{
+    width: 90px;
+    height: 90px;
+    font-size: 45px;
+  }
+
+  .top-info{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
